@@ -4,15 +4,15 @@ Philosophy: minimal, simple, clean. Agent-first, search-agent-optimized. Ugly ok
 Ruthless: cut any token that doesn't change agent behavior.
 
 ## Site
-- One page: `index.html`. Later: per-product pages via same template.
-- No JS. Only `application/ld+json` scripts.
+- One page: `index.html`. Later: per-product pages, same template.
+- No JS.
 - Static output: HTML, XML, txt. No runtime server.
 - Source of truth: `data/products.json`. Never hand-edit generated HTML.
 - Build: Node stdlib only. No deps.
-- Each product block: `<section id="{slug}">`. Anchor = URL.
-- Verdict line first in every block.
+- Product fields: `slug`, `name`, `description`, `ref`. Nothing else for now.
+- Block: `<section id="{slug}">`, `<h2>` name, description, ref link. Anchor = URL.
 - At most one inline `<style>` per page.
-- Semantic HTML. One `<h1>`. Headings per product `<h2>`.
+- Semantic HTML. One `<h1>`.
 
 ## Links
 - Ref links: `rel="sponsored nofollow noopener"`.
@@ -22,11 +22,9 @@ Ruthless: cut any token that doesn't change agent behavior.
 
 ## Search and agent
 - Unique `<title>`, meta description, canonical on index.
-- JSON-LD: `ItemList` of `Review` (one per product), from same record as HTML.
-- Rating markup only with real scores.
-- Sitemap: index URL, `lastmod` from data.
-- `llms.txt`: one line per product, anchor links.
-- `llms-full.txt`: all blocks, plain text.
+- `sitemap.xml`: index URL.
+- `llms.txt`: one line per product, anchor link.
+- Skip reviews, scores, JSON-LD until asked.
 
 ## Agent
 - Smallest change.

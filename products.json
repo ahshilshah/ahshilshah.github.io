@@ -23,6 +23,12 @@
       "name": "Capital One Venture X",
       "description": "Strong for miscellaneous spend at 2x miles and for Costco purchases. Annual fee offset by a travel credit. Strict rules around credit line increases.",
       "ref": "https://i.capitalone.com/Gm0p8srdi"
+    },
+    {
+      "slug": "amex-delta-gold",
+      "name": "Amex Delta SkyMiles Gold",
+      "description": "15% off award tickets, 2 free checked bags, and a rideshare credit. Minimal annual fee.",
+      "ref": "https://americanexpress.com/en-us/referral/delta-skymiles-gold-american-express-card?ref=AHSHISWoNV&XL=MIANS"
     }
   ]
 }

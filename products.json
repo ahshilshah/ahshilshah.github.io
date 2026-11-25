@@ -11,6 +11,12 @@
       "name": "SoFi",
       "description": "4.7% savings rate, clean interface, and banking, investing and crypto accounts that work together. No sweep account feature.",
       "ref": "https://www.sofi.com/invite/money?gcp=4446edbd-4705-46c6-a629-87e4700a6d1c&isAliasGcp=false&siid=d4352022-15bb-4f10-8a44-fc97edccfd78"
+    },
+    {
+      "slug": "bilt-palladium",
+      "name": "Bilt Palladium",
+      "description": "Strong value for frequent American Airlines or Alaska Airlines flyers. Bilt Cash makes points easier to redeem, and Rent Day benefits are usable. Earning on rent payments involves complicated point calculations.",
+      "ref": "https://www.bilt.com/card?invite=BRE3ZUQU"
     }
   ]
 }

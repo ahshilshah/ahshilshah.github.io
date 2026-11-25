@@ -31,6 +31,7 @@ Ruthless: cut any token that doesn't change agent behavior.
 - No new deps without asking.
 - No model names in commits, PRs, comments, repo files.
 - Push to `main` by default. No PR unless asked.
+- Before every commit to `main`: `node build.mjs`, commit generated files too.
 - Commit message: no model names. Session trailer ok.
 - Rule conflict: stop, ask.
 

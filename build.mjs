@@ -1,6 +1,6 @@
 // Build static site from products.json. Node stdlib only.
 // Usage: node build.mjs
-import { readFile, writeFile } from "node:fs/promises";
+import { readFile, writeFile, rm } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -74,28 +74,10 @@ section{margin:0 0 2rem}
 </head>
 <body>
 <h1>${esc(site.title)}</h1>
-<p class="disclosure">${esc(site.disclosure)} <a href="disclosure.html">Details</a></p>
+<p class="disclosure">${esc(site.disclosure)}</p>
 <main>
 ${blocks}
 </main>
-</body>
-</html>
-`;
-
-// --- disclosure.html --------------------------------------------------------
-const disclosure = `<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Disclosure | ${esc(site.title)}</title>
-<meta name="description" content="Affiliate and referral disclosure.">
-<link rel="canonical" href="${esc(site.url)}disclosure.html">
-</head>
-<body>
-<h1>Disclosure</h1>
-<p>${esc(site.disclosure)}</p>
-<p><a href="${esc(site.url)}">Back to ${esc(site.title)}</a></p>
 </body>
 </html>
 `;
@@ -104,7 +86,6 @@ const disclosure = `<!doctype html>
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>${esc(site.url)}</loc></url>
-  <url><loc>${esc(site.url)}disclosure.html</loc></url>
 </urlset>
 `;
 
@@ -124,7 +105,6 @@ ${products.map((p) => `- [${p.name}](${site.url}#${p.slug}): ${p.description}`).
 // --- write ------------------------------------------------------------------
 const outputs = {
   "index.html": index,
-  "disclosure.html": disclosure,
   "sitemap.xml": sitemap,
   "robots.txt": robots,
   "llms.txt": llms,
@@ -133,6 +113,9 @@ const outputs = {
 for (const [name, body] of Object.entries(outputs)) {
   await writeFile(join(root, name), body);
 }
+
+// Remove stale output from the old multipage/disclosure layout.
+await rm(join(root, "disclosure.html"), { force: true });
 
 // Rule: no <script> except ld+json.
 const scripts = (index.match(/<script/g) || []).length;

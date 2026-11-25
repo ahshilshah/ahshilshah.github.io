@@ -17,7 +17,7 @@ Ruthless: cut any token that doesn't change agent behavior.
 ## Links
 - Ref links: `rel="sponsored nofollow noopener"`.
 - No cloaking, no redirect pages.
-- Affiliate disclosure above fold. Link `disclosure.html`.
+- Affiliate disclosure above fold, on index. No separate page.
 - Dead/redirecting ref link = build fail.
 
 ## Search and agent

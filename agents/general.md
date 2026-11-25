@@ -30,8 +30,8 @@ Ruthless: cut any token that doesn't change agent behavior.
 - Smallest change.
 - No new deps without asking.
 - No model names in commits, PRs, comments, repo files.
-- Commit/push/PR only when asked.
-- Work on session branch.
+- Push to `main` by default. No PR unless asked.
+- Commit message: no model names. Session trailer ok.
 - Rule conflict: stop, ask.
 
 ## Writing style (agent files)

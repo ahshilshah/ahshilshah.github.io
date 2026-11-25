@@ -1,37 +1,42 @@
 # Rules
 
-Philosophy: simple, minimal, agent-first, clean. Ugly ok; cluttered not.
+Philosophy: minimal, simple, clean. Agent-first, search-agent-optimized. Ugly ok; cluttered not.
+Ruthless: cut any token that doesn't change agent behavior.
 
 ## Site
-- No JS. Only `application/ld+json` scripts allowed.
-- Static output: HTML, XML, txt.
+- One page: `index.html`. Later: per-product pages via same template.
+- No JS. Only `application/ld+json` scripts.
+- Static output: HTML, XML, txt. No runtime server.
 - Source of truth: `data/products.json`. Never hand-edit generated HTML.
 - Build: Node stdlib only. No deps.
-- Multipage: 1 page per product + index.
-- Verdict line first in every review.
+- Each product block: `<section id="{slug}">`. Anchor = URL.
+- Verdict line first in every block.
 - At most one inline `<style>` per page.
+- Semantic HTML. One `<h1>`. Headings per product `<h2>`.
 
 ## Links
 - Ref links: `rel="sponsored nofollow noopener"`.
 - No cloaking, no redirect pages.
-- Affiliate disclosure above fold on pages with ref links. Link `disclosure.html`.
+- Affiliate disclosure above fold. Link `disclosure.html`.
 - Dead/redirecting ref link = build fail.
 
-## SEO/AEO
-- Unique title, meta description, canonical per page.
-- JSON-LD Product + Review from same record as HTML.
+## Search and agent
+- Unique `<title>`, meta description, canonical on index.
+- JSON-LD: `ItemList` of `Review` (one per product), from same record as HTML.
 - Rating markup only with real scores.
-- Sitemap lastmod from data.
-- llms.txt: every page, one line each.
+- Sitemap: index URL, `lastmod` from data.
+- `llms.txt`: one line per product, anchor links.
+- `llms-full.txt`: all blocks, plain text.
 
 ## Agent
 - Smallest change.
 - No new deps without asking.
-- No commit/push/PR unless asked.
 - No model names in commits, PRs, comments, repo files.
+- Commit/push/PR only when asked.
 - Work on session branch.
 - Rule conflict: stop, ask.
 
-## Writing style (this file and all agent files)
-- Fragments over sentences. Drop articles, filler.
-- One rule per line. No rationale unless it changes behavior.
+## Writing style (agent files)
+- Fragments. Drop articles and filler.
+- One rule per line. Rationale only if it changes behavior.
+- Revisit when product count or page count changes.

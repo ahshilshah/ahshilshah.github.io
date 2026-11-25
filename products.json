@@ -1,0 +1,16 @@
+{
+  "site": {
+    "url": "https://ahshilshah.github.io/",
+    "title": "Product Picks",
+    "description": "Short product notes with referral links.",
+    "disclosure": "Some links are referral links. I may earn a commission at no cost to you."
+  },
+  "products": [
+    {
+      "slug": "example-product",
+      "name": "Example Product",
+      "description": "Placeholder. Replace with one or two sentences on what it is and why it is worth it.",
+      "ref": "https://example.com/?ref=placeholder"
+    }
+  ]
+}

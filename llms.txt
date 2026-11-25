@@ -2,4 +2,4 @@
 
 > Short product notes with referral links.
 
-- [Example Product](https://ahshilshah.github.io/#example-product): Placeholder. Replace with one or two sentences on what it is and why it is worth it.
+- [SoFi](https://ahshilshah.github.io/#sofi): 4.7% savings rate, clean interface, and banking, investing and crypto accounts that work together. No sweep account feature.

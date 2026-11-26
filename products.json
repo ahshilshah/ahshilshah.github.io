@@ -29,6 +29,12 @@
       "name": "Amex Delta SkyMiles Gold",
       "description": "15% off award tickets, 2 free checked bags, and a rideshare credit. Minimal annual fee.",
       "ref": "https://americanexpress.com/en-us/referral/delta-skymiles-gold-american-express-card?ref=AHSHISWoNV&XL=MIANS"
+    },
+    {
+      "slug": "robinhood",
+      "name": "Robinhood",
+      "description": "Mobile-first brokerage with a clean interface. Earn interest while selling options, lend stocks, and pay minimal contract fees.",
+      "ref": "https://join.robinhood.com/ahshils"
     }
   ]
 }

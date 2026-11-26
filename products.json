@@ -41,6 +41,12 @@
       "name": "Chase Sapphire Reserve",
       "description": "DashPass included, $35 monthly credits, point transfers to Hyatt, an annual Edit credit, and an annual StubHub credit.",
       "ref": "https://www.referyourchasecard.com/19y/KITTO5CJYN"
+    },
+    {
+      "slug": "chase-sapphire-preferred",
+      "name": "Chase Sapphire Preferred",
+      "description": "Versatile travel card with point transfers to Hyatt. $95 annual fee.",
+      "ref": "https://www.referyourchasecard.com/19y/KITTO5CJYN"
     }
   ]
 }
